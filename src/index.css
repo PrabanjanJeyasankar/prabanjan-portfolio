@@ -6,7 +6,7 @@
     background-color: black;
     color: white;
     font-family: 'Inter';
-    --gray-100: #f5f5f5; /* lightest gray */
+    --gray-100: #f5f5f5;
     --gray-150: #eaeaea;
     --gray-200: #e0e0e0;
     --gray-250: #d6d6d6;
@@ -22,11 +22,12 @@
     --gray-750: #707070;
     --gray-800: #666666;
     --gray-850: #5c5c5c;
-    --gray-900: #525252; /* darkest gray */
+    --gray-900: #525252;
 }
 
 html {
     scroll-behavior: smooth;
+        overflow-x: hidden; 
 }
 
 @font-face {

@@ -15,19 +15,24 @@ function NavigationBarComponent() {
             <div className={navBarStyles.logo}>
                 <img
                     src={profilePicture}
-                    alt="Avatar"
+                    alt='Avatar'
                     className={navBarStyles.avatar}
                 />
                 <div className={navBarStyles.name_and_title}>
-                    <div className={navBarStyles.name}>Prabanjan Jeyasankar.</div>
-                    <div className={navBarStyles.title}>Designer & Developer</div>
+                    <div className={navBarStyles.name}>
+                        Prabanjan Jeyasankar.
+                    </div>
+                    <div className={navBarStyles.title}>
+                        Designer & Developer
+                    </div>
                 </div>
             </div>
 
             <div
-                className={`${navBarStyles.hamburger} ${isMenuOpen ? navBarStyles.active : ''}`}
-                onClick={toggleMenu}
-            >
+                className={`${navBarStyles.hamburger} ${
+                    isMenuOpen ? navBarStyles.active : ''
+                }`}
+                onClick={toggleMenu}>
                 <span className={navBarStyles.line}></span>
                 <span className={navBarStyles.line}></span>
             </div>
@@ -35,13 +40,18 @@ function NavigationBarComponent() {
             <nav
                 className={`${navBarStyles.navigation_bar} ${
                     isMenuOpen ? navBarStyles.show : ''
-                }`}
-            >
-                <a href="#" className={`${navBarStyles.link} ${navBarStyles.activeLink}`}>
+                }`}>
+                <a
+                    href='#'
+                    className={`${navBarStyles.link} ${navBarStyles.activeLink}`}>
                     Home
                 </a>
-                <a href="#" className={navBarStyles.link}>Portfolio</a>
-                <a href="#" className={navBarStyles.link}>About</a>
+                <a href='#' className={navBarStyles.link}>
+                    Portfolio
+                </a>
+                <a href='#' className={navBarStyles.link}>
+                    About
+                </a>
                 <HireMeButtonComponent />
             </nav>
         </header>

@@ -2,12 +2,20 @@
     max-width: 1400px;
     min-width: 320px;
     margin: 1.3rem auto;
-    /* margin: 1rem 3rem; */
     padding: 0;
     box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+* {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+@media (max-width: 820px) {
     #root {
         margin: 0 auto;
     }
