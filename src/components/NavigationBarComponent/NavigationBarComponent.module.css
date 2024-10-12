@@ -67,39 +67,44 @@
     align-items: center;
     width: 30px;
     height: 30px;
-    gap: 2px;
     cursor: pointer;
     position: relative;
     z-index: 20;
-    transition: background-color 0.3s ease;
+    background: transparent;
+    border: hidden;
+    transition: all 250ms ease-in-out;
 }
 
-.hamburger .line {
+.line {
+    position: absolute;
     width: 20px;
     height: 2px;
     background-color: white;
-    margin: 4px 0;
-    transition: all 0.3s ease;
+    transition: all 250ms ease-out;
+}
+
+.line:nth-child(1) {
+    transform: translateY(-4px);
+}
+
+.line:nth-child(2) {
+    transform: translateY(4px);
 }
 
 .hamburger.active {
     background-color: white;
-    width: 25px;
-    height: 25px;
-    border-radius: 0.4rem;
-    padding: 0.2rem;
+}
+
+.hamburger.active .line {
+    background-color: black;
 }
 
 .hamburger.active .line:nth-child(1) {
-    transform: rotate(50deg) translate(5px, 5px);
-    width: 20px;
-    background-color: black;
+    transform: translateY(0) rotate(45deg);
 }
 
 .hamburger.active .line:nth-child(2) {
-    transform: rotate(-50deg) translate(4px, -4px);
-    width: 20px;
-    background-color: black;
+    transform: translateY(0) rotate(-45deg);
 }
 
 @media (max-width: 768px) {
@@ -108,11 +113,10 @@
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 1px;
-        transition: padding 0.3s ease, border-radius 0.3s ease, border 0.3s ease;
     }
 
     .navigation_bar {
-        display: none;
+        display: flex;
         flex-direction: column;
         position: absolute;
         background-color: rgb(0, 0, 0);
@@ -120,47 +124,45 @@
         left: 0;
         right: 0;
         z-index: 10;
-        transition: all 0.3s ease;
-    }
-
-    .navigation_bar.show {
-        display: flex;
-    }
-
-    .hamburger {
-        display: flex;
-        gap: 0px;
-        margin-right: 1rem;
-    }
-
-    .navigation_bar {
         padding: 1rem;
         align-items: flex-start;
         gap: 12px;
         justify-content: center;
         overflow: hidden;
         width: 100%;
+        transform: translateY(8%);
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navigation_bar.show {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: flex;
+        gap: 0px;
+        margin-right: 1rem;
+        border-radius: 0.2rem;
     }
 
     .avatar {
         width: 35px;
         height: 35px;
-        border-radius: 8px;
-        object-fit: cover;
         transition: width 0.3s ease, height 0.3s ease;
     }
 
     .name {
         font-size: 0.9rem;
         font-weight: 600;
-        transition: font-size 0.3s ease, font-weight 0.3s ease;
     }
 
     .title {
         font-size: 0.85rem;
         color: rgba(255, 255, 255, 0.6);
-        transition: font-size 0.3s ease, color 0.3s ease;
     }
+
     .link {
         font-size: 1.3rem;
         color: rgb(173, 173, 173);
@@ -174,6 +176,5 @@
 
     .activeLink {
         color: white;
-        transition: color 0.3s ease;
     }
 }

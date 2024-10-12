@@ -132,8 +132,10 @@
     }
     .button::before {
         border-radius: 1.5rem;
-        /* background-color: hsla(260 97% 61% / 0.75); */
         z-index: 0;
+    }
+    .button::after {
+        border-radius: 1.5rem;
     }
     .text_button{
         color: white;
