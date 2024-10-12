@@ -1,9 +1,12 @@
 import './App.css'
+import HeroComponent from './components/HeroComponent/HeroComponent'
+import NavigationBarComponent from './components/NavigationBarComponent/NavigationBarComponent'
 
 function App() {
     return (
         <>
-            <div>Prabanjan Portfolio</div>
+            <NavigationBarComponent />
+            <HeroComponent/>
         </>
     )
 }
