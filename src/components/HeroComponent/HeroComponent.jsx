@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import heroStyles from './HeroComponent.module.css'
 import HeroAppIconsComponent from '../HeroAppIconsComponent/HeroAppIconsComponent'
 
 function HeroComponent() {
+    const [isVisible, setIsVisible] = useState(false)
+
+    useEffect(() => {
+        const timer = setTimeout(() => setIsVisible(true), 100)
+        return () => clearTimeout(timer)
+    }, [])
+
     return (
-        <section className={heroStyles.hero_section}>
+        <section
+            className={`${heroStyles.hero_section} ${
+                isVisible ? heroStyles.visible : ''
+            }`}>
             <div className={heroStyles.availability}>
                 <span className={heroStyles.available_indicator}></span>
                 Available for freelance

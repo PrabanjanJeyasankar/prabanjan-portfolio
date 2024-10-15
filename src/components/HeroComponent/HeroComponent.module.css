@@ -1,11 +1,9 @@
-@keyframes popIn {
+@keyframes fadeIn {
     0% {
         opacity: 0;
-        transform: translateY(15%);
     }
     100% {
         opacity: 1;
-        transform: translateY(0);
     }
 }
 
@@ -13,10 +11,13 @@
     text-align: center;
     color: white;
     background-color: black;
-    padding: 5rem 0;
-    /* animation: popIn 0.7s cubic-bezier(0.25, 0.75, 0.5, 1.25); */
-    animation: popIn 0.6s ease-in-out;
-    will-change: opacity, transform;
+    padding: 5rem 0 3.5rem 0;
+    opacity: 0;
+    transition: opacity 1s cubic-bezier(0.57, 0.21, 0.69, 3.25);
+}
+
+.hero_section.visible {
+    opacity: 1;
 }
 
 .availability {
@@ -35,25 +36,12 @@
     );
 }
 
-@keyframes blink {
-    0%,
-    100% {
-        box-shadow: 0 0 15px rgba(168, 102, 255, 0.8),
-            0 0 30px rgba(168, 102, 255, 0.5), 0 0 40px rgba(168, 102, 255, 0.3);
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-}
-
 .available_indicator {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     background-color: #a866ff;
     margin-right: 8px;
-    /* animation: blink 1s infinite; */
 }
 
 .main_heading {
@@ -80,9 +68,6 @@
 
 @media (max-width: 820px) {
     .hero_section {
-        text-align: center;
-        color: white;
-        background-color: black;
         padding: 3rem 0;
     }
     .availability {
@@ -97,6 +82,7 @@
         margin: 4rem 3rem 0 3rem;
     }
 }
+
 @media (min-width: 1440px) {
     .availability {
         margin-bottom: 2rem;

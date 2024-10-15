@@ -1,0 +1,211 @@
+* {
+    font-family: 'Inter';
+}
+
+.fadeIn {
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.projectGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+}
+
+.projectCard {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projectImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.projectDetails {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0 0 0.5rem 1.3rem;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.7245273109243697) 0%,
+        rgba(0, 0, 0, 0.4332107843137255) 33%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    color: white;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    opacity: 1;
+    visibility: visible;
+}
+
+.projectTitle {
+    font-size: 1.35rem;
+    font-weight: 600;
+    letter-spacing: -0.03rem;
+    margin: 0;
+}
+
+.projectDescription {
+    margin-top: 8px;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+    opacity: 0.5;
+}
+
+.projectCard:hover .projectDetails {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.projectCard:hover .projectImage {
+    transform: scale(1.05);
+}
+
+.hoverOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.92) 0%,
+        rgba(0, 0, 0, 0.6909138655462185) 69%,
+        rgba(0, 0, 0, 0.582) 100%
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.projectCard:hover .hoverOverlay {
+    opacity: 1;
+}
+
+.button_text {
+    font-family: 'Inter';
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.uiverseButton {
+    line-height: 1;
+    text-decoration: none;
+    display: inline-flex;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    gap: 0.75rem;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    border-radius: 3rem;
+    font-weight: 600;
+    padding: 0.25rem 0.6rem 0.25rem 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.137);
+}
+
+.uiverseButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.uiverseButton:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+}
+
+.buttonIconWrapper {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    color: var(--clr, #000000);
+    background-color: #8c34ff;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.uiverseButton:hover .buttonIconWrapper {
+    color: #000;
+}
+
+.buttonIconSvg {
+    scale: 1.4;
+    transition: transform 0.3s ease-in-out;
+}
+
+.buttonIconSvgCopy {
+    position: absolute;
+    transform: translate(-150%, 150%);
+}
+
+.uiverseButton:hover .buttonIconSvg:first-child {
+    transform: translate(150%, -150%);
+}
+
+.uiverseButton:hover .buttonIconSvgCopy {
+    transform: translate(0);
+    transition: transform 0.3s ease-in-out 0.1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(15%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .projectGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+

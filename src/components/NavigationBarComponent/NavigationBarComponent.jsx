@@ -11,7 +11,7 @@ function NavigationBarComponent() {
     }
 
     return (
-        <header className={navBarStyles.header}>
+        <header className={`${navBarStyles.header} ${navBarStyles['offset-20']}`}>
             <div className={navBarStyles.logo}>
                 <img
                     src={profilePicture}
