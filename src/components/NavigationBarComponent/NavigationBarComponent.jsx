@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom' // Import Link from react-router-dom
 import navBarStyles from './NavigationBarComponent.module.css'
 import HireMeButtonComponent from '../HireMeButtonComponent/HireMeButtonComponent'
 import profilePicture from '../../assets/images/prabanjan_pfp.jpg'
@@ -11,7 +12,8 @@ function NavigationBarComponent() {
     }
 
     return (
-        <header className={`${navBarStyles.header} ${navBarStyles['offset-20']}`}>
+        <header
+            className={`${navBarStyles.header} ${navBarStyles['offset-20']}`}>
             <div className={navBarStyles.logo}>
                 <img
                     src={profilePicture}
@@ -41,19 +43,21 @@ function NavigationBarComponent() {
                 className={`${navBarStyles.navigation_bar} ${
                     isMenuOpen ? navBarStyles.show : ''
                 }`}>
-                <a
-                    href='#'
+                {/* Replace <a> with <Link> for routing */}
+                <Link
+                    to='/'
                     className={`${navBarStyles.link} ${navBarStyles.activeLink}`}>
                     Home
-                </a>
-                <a href='#' className={navBarStyles.link}>
+                </Link>
+                <Link to='/portfolio' className={navBarStyles.link}>
                     Portfolio
-                </a>
-                <a href='#' className={navBarStyles.link}>
-                    About
-                </a>
+                </Link>
+                <Link to='/about' className={navBarStyles.link}>
+                    Me
+                </Link>
                 <HireMeButtonComponent />
             </nav>
+            
         </header>
     )
 }

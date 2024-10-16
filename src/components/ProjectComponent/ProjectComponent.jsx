@@ -1,52 +1,22 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import projectStyles from './ProjectComponent.module.css'
 import fetchProjects from '../../services/fetchProject'
 
 function ProjectComponent() {
-    const [projects, setProjects] = useState([])
-    const [visibleCards, setVisibleCards] = useState(new Set())
-    const projectRefs = useRef([])
+    const projects = fetchProjects() // Assuming this function fetches projects data
+    const navigate = useNavigate()
 
-    useEffect(() => {
-        const projectData = fetchProjects()
-        setProjects(projectData)
-        setVisibleCards(new Set())
-    }, [])
-
-    useEffect(() => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    setVisibleCards((prev) =>
-                        new Set(prev).add(entry.target.id)
-                    )
-                    observer.unobserve(entry.target)
-                }
-            })
-        })
-
-        projectRefs.current.forEach((card) => {
-            if (card) {
-                observer.observe(card)
-            }
-        })
-
-        return () => {
-            observer.disconnect()
-        }
-    }, [projects])
+    const handleViewDetails = (projectId) => {
+        navigate(`/viewproject/${projectId}`)
+    }
 
     return (
         <div className={projectStyles.projectGrid}>
             {projects.map((project, index) => (
                 <div
                     key={index}
-                    className={`${projectStyles.projectCard} ${
-                        visibleCards.has(`project-${index}`)
-                            ? `${projectStyles.visible} ${projectStyles.fadeIn}`
-                            : ''
-                    }`}
-                    ref={(el) => (projectRefs.current[index] = el)}
+                    className={projectStyles.projectCard}
                     id={`project-${index}`}>
                     <img
                         src={project.thumbnail}
@@ -57,12 +27,14 @@ function ProjectComponent() {
                         <h3 className={projectStyles.projectTitle}>
                             {project.title}
                         </h3>
-                        <p className={projectStyles.projectDescription}>
-                            {project.description}
+                        <p className={projectStyles.projectRole}>
+                            {project.role}
                         </p>
                     </div>
                     <div className={projectStyles.hoverOverlay}>
-                        <button className={projectStyles.uiverseButton}>
+                        <button
+                            className={projectStyles.view_details_button}
+                            onClick={() => handleViewDetails(project.id)}>
                             <p className={projectStyles.button_text}>
                                 View Details
                             </p>

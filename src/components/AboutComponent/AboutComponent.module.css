@@ -1,0 +1,47 @@
+.container {
+    background-color: #000;
+    color: #fff;
+    padding: 2rem;
+  }
+  
+  .title {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .content {
+    display: flex;
+    gap: 2rem;
+    align-items: flex-start;
+  }
+  
+  .image {
+    width: 25.5%;
+    height: 30%;
+    object-fit: cover;
+    border-radius: 1rem;
+  }
+  
+  .textContent {
+    margin-left: 4rem;
+  }
+  
+  .paragraph {
+    color: #ffffff80;
+    font-weight: 500;
+    font-size: 1.05rem;
+    margin:0 0 1rem 0;
+    line-height: 27px;
+  }
+  
+  @media (max-width: 768px) {
+    .content {
+      flex-direction: column;
+    }
+  
+    .image {
+      width: 100%;
+      height: auto;
+    }
+  }

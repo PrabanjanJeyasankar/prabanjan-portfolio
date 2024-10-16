@@ -2,10 +2,6 @@
     font-family: 'Inter';
 }
 
-.fadeIn {
-    animation: fadeIn 1s forwards;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -21,6 +17,7 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 20px;
+    margin: 0 auto;
 }
 
 .projectCard {
@@ -28,9 +25,13 @@
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.6s ease forwards;
+    animation-delay: var(--delay, 0s);
 }
 
-.projectImage {
+.projectCard img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -45,14 +46,13 @@
     padding: 0 0 0.5rem 1.3rem;
     background: linear-gradient(
         0deg,
-        rgba(0, 0, 0, 0.7245273109243697) 0%,
-        rgba(0, 0, 0, 0.4332107843137255) 33%,
+        rgba(0, 0, 0, 0.72) 0%,
+        rgba(0, 0, 0, 0.43) 33%,
         rgba(255, 255, 255, 0) 100%
     );
     color: white;
-    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     opacity: 1;
-    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .projectTitle {
@@ -62,7 +62,7 @@
     margin: 0;
 }
 
-.projectDescription {
+.projectRole {
     margin-top: 8px;
     font-size: 1.05rem;
     font-weight: 500;
@@ -72,10 +72,9 @@
 
 .projectCard:hover .projectDetails {
     opacity: 0;
-    visibility: hidden;
 }
 
-.projectCard:hover .projectImage {
+.projectCard:hover img {
     transform: scale(1.05);
 }
 
@@ -91,8 +90,8 @@
     background: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.92) 0%,
-        rgba(0, 0, 0, 0.6909138655462185) 69%,
-        rgba(0, 0, 0, 0.582) 100%
+        rgba(0, 0, 0, 0.69) 69%,
+        rgba(0, 0, 0, 0.58) 100%
     );
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
@@ -108,7 +107,8 @@
     font-weight: 500;
 }
 
-.uiverseButton {
+.view_details_button {
+    position: relative;
     line-height: 1;
     text-decoration: none;
     display: inline-flex;
@@ -131,18 +131,7 @@
     border: 1px solid rgba(255, 255, 255, 0.137);
 }
 
-.uiverseButton::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border-radius: inherit;
-    pointer-events: none;
-}
-
-.uiverseButton:hover {
+.view_details_button:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 }
@@ -152,16 +141,11 @@
     width: 40px;
     height: 40px;
     position: relative;
-    color: var(--clr, #000000);
     background-color: #8c34ff;
     border-radius: 50%;
     display: grid;
     place-items: center;
     overflow: hidden;
-}
-
-.uiverseButton:hover .buttonIconWrapper {
-    color: #000;
 }
 
 .buttonIconSvg {
@@ -174,33 +158,13 @@
     transform: translate(-150%, 150%);
 }
 
-.uiverseButton:hover .buttonIconSvg:first-child {
+.view_details_button:hover .buttonIconSvg:first-child {
     transform: translate(150%, -150%);
 }
 
-.uiverseButton:hover .buttonIconSvgCopy {
+.view_details_button:hover .buttonIconSvgCopy {
     transform: translate(0);
     transition: transform 0.3s ease-in-out 0.1s;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-@keyframes popIn {
-    0% {
-        opacity: 0;
-        transform: translateY(15%);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 @media (min-width: 768px) {
@@ -208,4 +172,3 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-

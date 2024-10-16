@@ -5,10 +5,10 @@
     padding: 0.5rem;
     border-radius: 18px;
     border: 1px solid rgba(255, 255, 255, 0.15);
-    background: rgba(255, 255, 255, 0);
+    background:  rgba(0, 0, 0, 0.37);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(15.7px);
+    backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15.7px);
     transition: padding 0.3s ease, border-radius 0.3s ease, border 0.3s ease;
     position: sticky;
