@@ -15,7 +15,7 @@ const fetchProjects = () => {
             description:
                 'An application for managing and discovering books, allowing users to maintain personal libraries and search for books in various categories.',
             techStack: ['ReactJs', 'NodeJs', 'ExpressJS', 'MongoDB'],
-            hostedLink: 'https://book-hub-ruddy.vercel.app/',
+            hostedLink: 'https://book-hub-prabanjan.vercel.app/',
             thumbnail: BookHub,
         },
         {
