@@ -1,5 +1,37 @@
 /* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap'); */
 
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    /* overflow-y: hidden;  */
+}
+
+#root {
+    max-width: 1400px;
+    min-width: 320px;
+    margin: 1.3rem auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+* {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+*::-webkit-scrollbar {
+    display: none; /* Safari and Chrome */
+}
+
+@media (max-width: 1440px) {
+    #root {
+        max-width: 1200px;
+        min-width: 320px;
+        margin: 1.3rem auto;
+    }
+}
+
 :root {
     font-synthesis: none;
     text-rendering: optimizeLegibility;

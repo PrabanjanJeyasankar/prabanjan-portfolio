@@ -1,0 +1,233 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: rgba(0, 0, 0, 0.37);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15.7px);
+    transition: padding 0.3s ease, border-radius 0.3s ease, border 0.3s ease;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.offset-20 {
+    top: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-decoration: none;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    object-fit: cover;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+.name {
+    font-size: 1rem;
+    font-weight: bold;
+    transition: font-size 0.3s ease, font-weight 0.3s ease;
+
+    color: white;
+}
+
+.title {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+    transition: font-size 0.3s ease;
+}
+
+.navigation_bar {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.link {
+    text-decoration: none;
+    opacity: 0.8;
+    color: rgb(173, 173, 173);
+    transition: background-color 0.2s, color 0.2s, transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.activeLink {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: relative;
+    z-index: 20;
+    background: transparent;
+    border: hidden;
+    transition: all 250ms ease-in-out;
+}
+
+.line {
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    transition: all 250ms ease-out;
+}
+
+.line:nth-child(1) {
+    transform: translateY(-4px);
+}
+
+.line:nth-child(2) {
+    transform: translateY(4px);
+}
+
+.hamburger.active {
+    background-color: white;
+}
+
+.hamburger.active .line {
+    background-color: black;
+}
+
+.hamburger.active .line:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.hamburger.active .line:nth-child(2) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+@media (max-width: 820px) {
+    .header {
+        padding: 0.5rem 0.6rem;
+        margin: 0 0.5rem;
+        border: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-radius: 14px;
+    }
+
+    .navigation_bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: linear-gradient(
+                rgba(131, 131, 131, 0.11),
+                rgba(167, 167, 167, 0.1)
+            ),
+            rgba(0, 0, 0, 0.945);
+        top: 12%;
+        right: -100%;
+        z-index: 10;
+        padding: 2rem;
+        align-items: flex-end;
+        gap: 12px;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        width: 60%;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: right 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navigation_bar.show {
+        right: 0;
+        opacity: 1;
+    }
+
+    .hamburger {
+        display: flex;
+        gap: 0px;
+        margin-right: 0.5rem;
+        border-radius: 0.2rem;
+    }
+
+    .avatar {
+        width: 35px;
+        height: 35px;
+        transition: width 0.3s ease, height 0.3s ease;
+    }
+
+    .name {
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    .title {
+        font-size: 0.85rem;
+        color: rgba(255, 255, 255, 0.6);
+    }
+
+    .link {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: rgb(173, 173, 173);
+        padding: 0.6rem;
+    }
+
+    .link:hover {
+        transform: scale(1.05);
+        color: white;
+    }
+
+    .activeLink {
+        color: white;
+    }
+}
+
+@media (max-width: 426px) {
+    .navigation_bar {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background: linear-gradient(
+                rgba(131, 131, 131, 0.11),
+                rgba(167, 167, 167, 0.1)
+            ),
+            rgba(0, 0, 0, 0.945);
+        top: 12%;
+        right: -100%;
+        z-index: 10;
+        padding: 2rem;
+        align-items: flex-end;
+        gap: 12px;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 2rem;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        width: 70%;
+        backdrop-filter: blur(10px);
+        opacity: 0;
+        transition: right 0.4s ease, opacity 0.4s ease;
+    }
+
+    .navigation_bar.show {
+        right: 0;
+        opacity: 1;
+    }
+}
