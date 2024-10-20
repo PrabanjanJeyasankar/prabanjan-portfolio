@@ -63,7 +63,7 @@ const fetchProjects = () => {
             subtitle: 'Architectural design showcase with AR!',
             role: 'UI/UX Designer (Freelance)',
             description:
-                'A web-based platform for architects to present their portfolios and engage with clients in a digital environment.',
+                'Arcexperio offers architects a space to showcase their projects through interactive AR previews, giving clients a fresh way to experience designs. It’s a platform that helps both architects and users explore and engage with architecture in an entirely new, immersive format. Whether you’re presenting your work or exploring designs, Arcexperio makes the process simple and engaging.',
             techStack: ['Figma', 'Photoshop'],
             hostedLink: 'http://www.youtube.com/watch?v=B8XiWZE0hmE',
             thumbnail: Arcexperio,

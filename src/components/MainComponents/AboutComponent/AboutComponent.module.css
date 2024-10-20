@@ -1,11 +1,12 @@
 .container {
     background-color: #000;
     color: #fff;
-    padding: 2rem;
+    padding: 2rem 0;
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.57, 0.21, 0.69, 3.25);
 }
-.container.visible{
+
+.container.visible {
     opacity: 1;
 }
 
@@ -28,7 +29,7 @@
     border-radius: 1rem;
 }
 
-.textContent {
+.text_content {
     margin-left: 4rem;
 }
 
@@ -40,23 +41,102 @@
     line-height: 27px;
 }
 
-@media (max-width: 426px) {
+@media (min-width: 320px) and (max-width: 435px) {
     .title {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-}
 
-@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
     .content {
         flex-direction: column;
     }
 
-    .textContent {
+    .text_content {
         margin-left: 0rem;
     }
 
     .image {
-        width: 100%;
+        width: 100% !important;
         height: auto;
+    }
+}
+
+@media (min-width: 436px) and (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text_content {
+        margin-left: 0rem;
+    }
+
+    .image {
+        width: 65%;
+        height: auto;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .container {
+        padding: 2rem;
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image {
+        width: 55%;
+        height: auto;
+    }
+
+    .paragraph {
+        font-weight: 500;
+        font-size: 1.05rem;
+    }
+
+    .text_content {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .container {
+        padding: 2rem;
+    }
+    .image {
+        width: 40%;
+        height: auto;
+    }
+
+    .text_content {
+        margin-left: 2rem;
+    }
+
+    .paragraph {
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1640px) {
+    .image {
+        width: 26%;
+        height: auto;
+    }
+
+    .text_content {
+        margin-left: 2rem;
+    }
+
+    .paragraph {
+        font-weight: 500;
+        font-size: 1.15rem;
     }
 }

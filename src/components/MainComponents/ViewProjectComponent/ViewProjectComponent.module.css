@@ -37,9 +37,9 @@
     border-radius: 1rem;
 }
 
-.projectMeta {
+.project_meta {
     margin: 4rem 0 0 0;
-    max-width: 700px;
+    max-width: 1000px;
 }
 
 .meta_section {
@@ -60,7 +60,7 @@
     opacity: 0.6;
     letter-spacing: -0.3px;
     line-height: 27px;
-    text-wrap: balance;
+    text-wrap: pretty
 }
 
 .hosted_link {
@@ -89,6 +89,7 @@
         font-size: 1rem;
     }
 }
+
 @media (min-width: 425px) {
     .project_details_container {
         margin: 0 1rem;
@@ -110,4 +111,20 @@
     .meta_content {
         font-size: 1rem;
     }
+}
+
+@media (min-width: 1024px) {
+   
+    .project_meta {
+        width: 800px;
+    }
+    
+}
+
+@media (min-width: 1440px) {
+   
+    .project_meta {
+        width: 900px;
+    }
+    
 }

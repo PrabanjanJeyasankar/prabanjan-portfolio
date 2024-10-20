@@ -40,7 +40,7 @@ function HeroComponent() {
                 </section>
                 <ProjectComponent />
                 <div className={heroStyles.hire_me_component}>
-                    <HireMeComponent/>
+                    <HireMeComponent />
                 </div>
             </div>
         </>

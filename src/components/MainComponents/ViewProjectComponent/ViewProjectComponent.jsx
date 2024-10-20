@@ -44,7 +44,7 @@ function ViewProjectComponent() {
                 alt={project.title}
                 className={viewProjectStyles.project_image}
             />
-            <div className={viewProjectStyles.projectMeta}>
+            <div className={viewProjectStyles.project_meta}>
                 {project.hostedLink && (
                     <MetaSection
                         title='Hosted Link'

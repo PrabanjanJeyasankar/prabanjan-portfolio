@@ -1,0 +1,164 @@
+.outer_container {
+    margin: 0;
+    padding: 20px 0;
+    color: #fff;
+    background-color: #000;
+    font-family: 'Inter', sans-serif;
+}
+
+.title,
+.stacks_title {
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.stacks_title {
+    margin-bottom: 4rem;
+}
+
+.entry {
+    margin: 3rem 0;
+}
+
+.inner_container {
+    display: flex;
+    width: 100%;
+}
+
+.header {
+    width: 100%;
+    flex: 2;
+}
+
+.meta {
+    flex: 3;
+}
+
+.event {
+    display: flex;
+    flex-direction: column;
+}
+
+.event_name,
+.company {
+    font-size: 1.5rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 600;
+}
+
+.project {
+    font-size: 1.5rem;
+    margin: 0 0 0.8rem 0;
+    font-weight: 600;
+}
+
+.role,
+.hackathon_role {
+    margin: 0 0 2.5rem 0;
+    font-size: 14px;
+    color: #ffffff80;
+}
+
+.year {
+    font-size: 1.5rem;
+    margin: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+
+.event_position {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 0.3rem;
+    opacity: 0.6;
+}
+
+.details,
+.responsibilities,
+.outcome,
+.impact {
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff85;
+    line-height: 1.6;
+    margin: 0.5rem 0;
+}
+
+.sampleWork {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.sampleWork a {
+    color: #4caf50;
+    text-decoration: none;
+    margin-left: 0.5rem;
+}
+
+.sampleWork a:hover {
+    text-decoration: underline;
+}
+
+.withBorder {
+    border-bottom: 1px solid #ffffff50;
+    padding-bottom: 1.5rem;
+}
+
+.period {
+    font-size: 18px;
+    font-weight: 300;
+    color: #888;
+    margin-bottom: 15px;
+}
+
+
+@media (max-width: 375px) {
+    .title,
+    .stacks_title {
+        font-size: 32px !important;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .company {
+        font-size: 22px !important;
+    }
+}
+@media (max-width: 425px) {
+    .title,
+    .stacks_title {
+        font-size: 32px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .stacks_title {
+        margin-bottom: 4rem;
+    }
+
+    .inner_container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .project {
+        font-size: 1.1rem;
+    }
+
+    .stacks_title {
+        margin-bottom: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .title,
+    .stacks_title {
+        font-size: 38px;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    .stacks_title {
+        margin-bottom: 4rem;
+    }
+}

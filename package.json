@@ -17,7 +17,8 @@
     "react-awesome-reveal": "^4.2.14",
     "react-dom": "^18.3.1",
     "react-fast-marquee": "^1.6.5",
-    "react-router-dom": "^6.27.0"
+    "react-router-dom": "^6.27.0",
+    "smooth-scrollbar": "^8.8.4"
   },
   "devDependencies": {
     "@eslint/js": "^9.11.1",

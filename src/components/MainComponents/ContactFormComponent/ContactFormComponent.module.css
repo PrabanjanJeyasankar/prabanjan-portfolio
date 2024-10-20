@@ -8,11 +8,13 @@
     align-items: center;
     justify-content: center;
     padding: 2rem;
+    margin-bottom: 10rem;
     background-color: #000;
     color: #fff;
     text-align: center;
     font-family: Arial, sans-serif;
-    height: 75vh;
+    /* height: 75vh; */
+    height: 100%;
     opacity: 0;
     transition: opacity 0.6s cubic-bezier(0.57, 0.21, 0.69, 3.25);
 }
@@ -131,7 +133,7 @@
 
 @media (min-width: 320px) {
     .contact_container {
-        height: 130vh;
+        /* height: 130vh; */
     }
 }
 
