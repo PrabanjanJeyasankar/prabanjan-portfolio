@@ -1,11 +1,13 @@
-import React, { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import navBarStyles from './NavigationBarComponent.module.css'
 import HireMeButtonComponent from '../../SupportComponents/HireMeButtonComponent/HireMeButtonComponent'
 import profilePicture from '../../../assets/images/prabanjan_pfp.jpg'
+import Scrollbar from 'smooth-scrollbar'
 
 function NavigationBarComponent() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const navbarRef = useRef(null)
 
     const toggleMenu = () => {
         setIsMenuOpen((prev) => !prev)
@@ -15,9 +17,28 @@ function NavigationBarComponent() {
         setIsMenuOpen(false)
     }
 
+    useEffect(() => {
+        const scrollbar = Scrollbar.init(document.body, {
+            damping: 0.03,
+        })
+
+        const updateNavbarPosition = () => {
+            if (navbarRef.current) {
+                const offset = scrollbar.offset.y
+                navbarRef.current.style.top = `${Math.max(10, offset + 22)}px`
+            }
+        }
+
+        // Listen to scroll events
+        scrollbar.addListener(updateNavbarPosition)
+        return () => {
+            scrollbar.removeListener(updateNavbarPosition)
+            Scrollbar.destroy(scrollbar)
+        }
+    }, [])
+
     return (
-        <header
-            className={`${navBarStyles.header} ${navBarStyles['offset-20']}`}>
+        <header ref={navbarRef} className={navBarStyles.header}>
             <Link to='/' className={navBarStyles.logo}>
                 <img
                     src={profilePicture}

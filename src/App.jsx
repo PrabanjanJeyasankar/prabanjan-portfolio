@@ -7,26 +7,32 @@ import PortfolioComponent from './components/MainComponents/PortfolioComponent/P
 import FooterComponent from './components/MainComponents/FooterComponent/FooterComponent'
 import AboutComponent from './components/MainComponents/AboutComponent/AboutComponent'
 import ContactFormComponent from './components/MainComponents/ContactFormComponent/ContactFormComponent'
-// import useSmoothScroll from './hooks/useSmoothScroll'
-import Scroll from './components/SupportComponents/SmoothScrollComponent/smoothScroll'
+// import Scroll from './components/SupportComponents/SmoothScrollComponent/smoothScroll'
 
 function App() {
-    // useSmoothScroll(100, 1000)
     return (
-        <div>
+        <div id='scroll'>
             <Router>
                 <NavigationBarComponent />
                 {/* <Scroll /> */}
-                <Routes>
-                    <Route path='/' element={<HeroComponent />} />
-                    <Route path='/portfolio' element={<PortfolioComponent />} />
-                    <Route path='/about' element={<AboutComponent />} />
-                    <Route path='/contact' element={<ContactFormComponent />} />
-                    <Route
-                        path='/viewproject/:id'
-                        element={<ViewProjectComponent />}
-                    />
-                </Routes>
+                <section id='content'>
+                    <Routes>
+                        <Route path='/' element={<HeroComponent />} />
+                        <Route
+                            path='/portfolio'
+                            element={<PortfolioComponent />}
+                        />
+                        <Route path='/about' element={<AboutComponent />} />
+                        <Route
+                            path='/contact'
+                            element={<ContactFormComponent />}
+                        />
+                        <Route
+                            path='/viewproject/:id'
+                            element={<ViewProjectComponent />}
+                        />
+                    </Routes>
+                </section>
             </Router>
             <FooterComponent />
         </div>

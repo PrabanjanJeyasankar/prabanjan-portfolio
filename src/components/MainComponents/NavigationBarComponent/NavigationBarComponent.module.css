@@ -8,8 +8,8 @@
     background: rgba(0, 0, 0, 0.37);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(15px);
+    top: 10px;
     -webkit-backdrop-filter: blur(15.7px);
-    /* transition: padding 0.3s ease, border-radius 0.3s ease, border 0.3s ease; */
     position: sticky;
     z-index: 1000;
 }
@@ -37,7 +37,7 @@
     font-size: 1rem;
     font-weight: bold;
     transition: font-size 0.3s ease, font-weight 0.3s ease;
-   
+
     color: white;
 }
 
@@ -123,7 +123,7 @@
 @media (max-width: 820px) {
     .header {
         padding: 0.5rem 0.6rem;
-        margin: 0 0.5rem;
+        margin: 1rem 0.5rem;
         border: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         border-radius: 14px;

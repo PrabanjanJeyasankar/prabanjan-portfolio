@@ -23,7 +23,6 @@
     opacity: 1;
 }
 
-
 .projectGrid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -178,10 +177,15 @@
     transition: transform 0.3s ease-in-out 0.1s;
 }
 
+@media (max-width: 768px) {
+    .projectGrid {
+        margin: 1rem 1rem;
+    }
+}
+
 @media (min-width: 320px) {
     .projectGrid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-        margin: 0 1rem;
     }
 
     .projectCard {
@@ -198,7 +202,7 @@
         letter-spacing: -0.03rem;
         margin: 0;
     }
-    
+
     .projectRole {
         margin-top: 4px;
         font-size: 0.8rem;

@@ -3,6 +3,7 @@ import heroStyles from './HeroComponent.module.css'
 import HeroAppIconsComponent from '../../SupportComponents/HeroAppIconsComponent/HeroAppIconsComponent'
 import ProjectComponent from '../ProjectComponent/ProjectComponent'
 import HireMeComponent from '../../MainComponents/HireMeComponent/HireMeComponent'
+// import Scroll from '../../SupportComponents/SmoothScrollComponent/smoothScroll'
 
 function HeroComponent() {
     const [isVisible, setIsVisible] = useState(false)
@@ -14,6 +15,7 @@ function HeroComponent() {
 
     return (
         <>
+            {/* <Scroll targetId='hero_component' /> */}
             <div className={heroStyles.hero_component_container}>
                 <section
                     className={`${heroStyles.hero_section} ${
