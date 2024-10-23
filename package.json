@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "core-js": "^3.38.1",
     "emailjs-com": "^3.2.0",
     "lucide-react": "^0.453.0",
     "react": "^18.3.1",
@@ -21,10 +22,14 @@
     "smooth-scrollbar": "^8.8.4"
   },
   "devDependencies": {
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
     "@eslint/js": "^9.11.1",
     "@types/react": "^18.3.10",
     "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-legacy": "^5.4.2",
     "@vitejs/plugin-react": "^4.3.2",
+    "babel-loader": "^9.2.1",
     "eslint": "^9.11.1",
     "eslint-plugin-react": "^7.37.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",

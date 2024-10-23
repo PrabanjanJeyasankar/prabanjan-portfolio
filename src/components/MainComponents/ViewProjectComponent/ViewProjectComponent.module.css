@@ -60,18 +60,20 @@
     opacity: 0.6;
     letter-spacing: -0.3px;
     line-height: 27px;
-    text-wrap: pretty
+    text-wrap: pretty;
 }
 
 .hosted_link {
     color: white;
 }
 
-@media (min-width: 320px) {
+@media (max-width: 1200px) {
     .project_details_container {
         margin: 0 1rem;
     }
+}
 
+@media (min-width: 320px) {
     .project_title {
         margin: 6rem 1rem 0 1rem;
         font-size: 2.5rem;
@@ -91,10 +93,6 @@
 }
 
 @media (min-width: 425px) {
-    .project_details_container {
-        margin: 0 1rem;
-    }
-
     .project_title {
         margin: 6rem 1rem 0 1rem;
         font-size: 3.5rem;
@@ -114,17 +112,13 @@
 }
 
 @media (min-width: 1024px) {
-   
     .project_meta {
         width: 800px;
     }
-    
 }
 
 @media (min-width: 1440px) {
-   
     .project_meta {
         width: 900px;
     }
-    
 }

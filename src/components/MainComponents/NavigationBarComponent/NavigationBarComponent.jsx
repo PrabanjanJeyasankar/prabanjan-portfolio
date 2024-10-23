@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import navBarStyles from './NavigationBarComponent.module.css'
 import HireMeButtonComponent from '../../SupportComponents/HireMeButtonComponent/HireMeButtonComponent'
-import profilePicture from '../../../assets/images/prabanjan_pfp.jpg'
+import profilePicture from '../../../assets/images/prabanjan_pfp.webp'
 import Scrollbar from 'smooth-scrollbar'
 
 function NavigationBarComponent() {
@@ -29,7 +29,6 @@ function NavigationBarComponent() {
             }
         }
 
-        // Listen to scroll events
         scrollbar.addListener(updateNavbarPosition)
         return () => {
             scrollbar.removeListener(updateNavbarPosition)

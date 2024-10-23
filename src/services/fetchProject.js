@@ -5,12 +5,19 @@
 // import Rentify from '../assets/images/project-mockups/Rentify-Mockup.png'
 // import Revive from '../assets/images/project-mockups/Revive-Mockup.png'
 
-import BookHub from '../assets/images/project-mockups/Book-Hub-Mockup.webp'
-import Arcexperio from '../assets/images/project-mockups/Arcexperio-Mockup.webp'
-import CareerCompass from '../assets/images/project-mockups/Career-Compass-Mockup.webp'
-import DribbbleClone from '../assets/images/project-mockups/Dribbble-Mockup.webp'
-import Rentify from '../assets/images/project-mockups/Rentify-Mockup.webp'
-import Revive from '../assets/images/project-mockups/Revive-Mockup.webp'
+// import BookHub from '../assets/images/project-mockups/Book-Hub-Mockup.webp'
+// import Arcexperio from '../assets/images/project-mockups/Arcexperio-Mockup.webp'
+// import CareerCompass from '../assets/images/project-mockups/Career-Compass-Mockup.webp'
+// import DribbbleClone from '../assets/images/project-mockups/Dribbble-Mockup.webp'
+// import Rentify from '../assets/images/project-mockups/Rentify-Mockup.webp'
+// import Revive from '../assets/images/project-mockups/Revive-Mockup.webp'
+
+import BookHub from '../assets/images/project_mockup_test_1/Book-Hub-Mockup.webp'
+import Arcexperio from '../assets/images/project_mockup_test_1/Arcexperio-Mockup.webp'
+import CareerCompass from '../assets/images/project_mockup_test_1/Career-Compass-Mockup.webp'
+import DribbbleClone from '../assets/images/project_mockup_test_1/Dribbble-Mockup.webp'
+import Rentify from '../assets/images/project_mockup_test_1/Rentify-Mockup.webp'
+import Revive from '../assets/images/project_mockup_test_1/Revive-Mockup.webp'
 
 const fetchProjects = () => {
     return [
