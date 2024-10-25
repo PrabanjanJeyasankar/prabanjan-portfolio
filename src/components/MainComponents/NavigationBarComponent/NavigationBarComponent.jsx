@@ -25,7 +25,7 @@ function NavigationBarComponent() {
         const updateNavbarPosition = () => {
             if (navbarRef.current) {
                 const offset = scrollbar.offset.y
-                navbarRef.current.style.top = `${Math.max(10, offset + 22)}px`
+                navbarRef.current.style.top = `${Math.max(0,offset)}px`
             }
         }
 
@@ -35,6 +35,12 @@ function NavigationBarComponent() {
             Scrollbar.destroy(scrollbar)
         }
     }, [])
+
+    const handleKeyDown = (event, toggleMenu) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            toggleMenu()
+        }
+    }
 
     return (
         <header ref={navbarRef} className={navBarStyles.header}>
@@ -54,14 +60,16 @@ function NavigationBarComponent() {
                 </div>
             </Link>
 
-            <div
+            <button
                 className={`${navBarStyles.hamburger} ${
                     isMenuOpen ? navBarStyles.active : ''
                 }`}
-                onClick={toggleMenu}>
-                <span className={navBarStyles.line}></span>
-                <span className={navBarStyles.line}></span>
-            </div>
+                onClick={toggleMenu}
+                aria-expanded={isMenuOpen}
+                aria-label='Toggle navigation menu'>
+                <span className={navBarStyles.line} />
+                <span className={navBarStyles.line} />
+            </button>
 
             <nav
                 className={`${navBarStyles.navigation_bar} ${

@@ -27,7 +27,7 @@ const fetchProjects = () => {
             subtitle: 'Library management app',
             role: 'Full Stack Developer',
             description:
-                'Book Hub is an innovative library management application designed to streamline the process of managing book collections for both personal and community use. \n\n With its core functionality focused on basic CRUD (Create, Read, Update, Delete) operations, users can effortlessly add new books, view their existing collections, update book details, and remove books as needed.\n\nThe application is built using React and CSS, ensuring a modern and intuitive user interface that is both responsive and visually appealing, making it accessible on various devices, from desktops to mobile phones.\n\nLeveraging Axios for efficient API interactions, Book Hub provides dynamic data management, enabling real-time updates and seamless data fetching. This ensures that users always have access to the most current information about their books.\n\nAdditionally, the integration of React Router allows for smooth navigation throughout the application, enhancing the overall user experience.\n\nThe application employs state management tools and various libraries and Styled Components.',
+                'Book Hub is a simple library management app that helps you manage your book collections easily. You can add, browse, update, or remove books with just a few clicks. Designed with a modern look, it works seamlessly on any device. With real-time updates and easy navigation, Book Hub makes it effortless to keep track of your books, whether for personal use or sharing with the community!',
             techStack: ['ReactJs', 'NodeJs', 'ExpressJS', 'MongoDB'],
             hostedLink: 'https://book-hub-prabanjan.vercel.app/',
             thumbnail: BookHub,
@@ -38,9 +38,9 @@ const fetchProjects = () => {
             subtitle: 'House rental app',
             role: 'Front End Developer',
             description:
-                'A platform for users to rent out properties and search for available rentals.',
+                'Rentify is an easy-to-use platform where you can effortlessly upload details about your property, whether it is an apartment, house, or unique space. Once listed, other users can browse your offerings and purchase their ideal place to stay. Whether you are looking to rent out a spare room or an entire property, Rentify connects you with potential renters, making the process seamless and efficient. Share your space with others while earning extra income, all within a vibrant community of renters and property owners.',
             techStack: ['ReactJs', 'CSS'],
-            hostedLink: 'https://rentify-prabanjan.vercel.app/',
+            // hostedLink: 'https://rentify-prabanjan.vercel.app/',
             thumbnail: Rentify,
         },
         {
@@ -49,7 +49,7 @@ const fetchProjects = () => {
             subtitle: 'Career path guidance app',
             role: 'UI/UX Designer',
             description:
-                'A tool for job seekers to assess their skills and find suitable career paths, including job recommendations.',
+                'A tool designed for job seekers to assess their skills and explore suitable career paths. It offers personalized job recommendations based on your skillset and interests, helping you find the right opportunities to advance your career.',
             techStack: ['ReactJs', 'NodeJs', 'ExpressJS', 'MongoDB'],
             thumbnail: CareerCompass,
         },
@@ -81,8 +81,8 @@ const fetchProjects = () => {
             subtitle: 'E-waste management app',
             role: 'UI/UX Designer',
             description:
-                'A health and wellness platform designed to help users track their fitness goals, mental well-being, and connect with wellness professionals.',
-            techStack: ['Figma', 'Sketch', 'InVision'],
+                'Revive is a forward-thinking web application aimed at tackling the growing issue of e-waste management. It connects businesses, individuals, scrap dealers, and recycling plants within a sustainable supply chain. By doing so, it offers users monetary rewards in exchange for their e-waste. Revive streamlines the entire process of collecting, sorting, and distributing e-waste, making it easier to monitor and manage. Plus, it encourages responsible disposal practices, making it a win-win for both users and the environment.',
+            techStack: ['Figma', 'Canva'],
             thumbnail: Revive,
         },
     ]

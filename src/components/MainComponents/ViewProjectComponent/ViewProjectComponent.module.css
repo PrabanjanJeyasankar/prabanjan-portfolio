@@ -64,7 +64,9 @@
 }
 
 .hosted_link {
-    color: white;
+    text-decoration: none;
+    color: #00fa08;
+    opacity: 1 !important;
 }
 
 @media (max-width: 1200px) {

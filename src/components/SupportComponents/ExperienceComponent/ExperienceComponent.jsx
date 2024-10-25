@@ -35,7 +35,7 @@ function ExperienceComponent() {
                             </p>
                             <p className={expStyles.role}>{experience.role}</p>
                             <p className={expStyles.responsibilities}>
-                                <span></span>Responsibilities:{' '}
+                                Responsibilities:
                                 {experience.responsibilities}
                             </p>
                             <p className={expStyles.impact}>
@@ -91,7 +91,7 @@ function ExperienceComponent() {
                 </div>
             ))}
             <h1 className={expStyles.stacks_title}>Stacks</h1>
-            <HeroAppIconsComponent/>
+            <HeroAppIconsComponent />
         </div>
     )
 }

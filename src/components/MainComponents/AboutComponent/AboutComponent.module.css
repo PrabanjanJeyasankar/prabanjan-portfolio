@@ -106,9 +106,25 @@
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1440px) {
+@media (min-width: 1025px) and (max-width: 1200px) {
+    .image {
+        width: 40%;
+        height: auto;
+    }
+
+    .text_content {
+        margin-left: 2rem;
+    }
+
+    .paragraph {
+        font-weight: 500;
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1440px) {
     .container {
-        padding: 2rem;
+        padding: 1rem;
     }
     .image {
         width: 40%;

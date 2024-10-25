@@ -26,31 +26,34 @@ function AboutComponent() {
                     />
                     <div className={aboutStyles.text_content}>
                         <p className={aboutStyles.paragraph}>
-                            Okay, so here’s where I’m supposed to convince you
-                            that I’m a genius or something, but let’s be
-                            real—I’m just your friendly neighborhood front-end
-                            wizard or UI/UX sorcerer. I spend my days turning
-                            chaotic ideas into something that doesn’t make you
-                            wanna gouge your eyes out when you look at a screen.
+                            Okay, so here&rsquo;s where I&rsquo;m supposed to
+                            convince you that I&rsquo;m a genius or something,
+                            but let&rsquo;s be real—I&rsquo;m just your friendly
+                            neighborhood front-end wizard or UI/UX sorcerer. I
+                            spend my days turning chaotic ideas into something
+                            that doesn&rsquo;t make you wanna gouge your eyes
+                            out when you look at a screen.
                         </p>
                         <p className={aboutStyles.paragraph}>
-                            I’ve got ReactJS, HTML, CSS, and all that “let’s
-                            make the web pretty and functional” stuff down. And
-                            if you think that’s all, I’ve got a decent set of
-                            UI/UX design skills too, 'cause why not make life
-                            harder by caring about how things actually look? I
-                            mean, who doesn’t love combining art and logic while
-                            dodging a nervous breakdown? Sure, I’ve been part of
-                            hackathons and projects that make me sound all
-                            “driven” and “passionate”—and hey, some of 'em have
-                            gone pretty well, while others, well, not so much.
+                            I&rsquo;ve got ReactJS, HTML, CSS, and all that
+                            “let&rsquo;s make the web pretty and functional”
+                            stuff down. And if you think that&rsquo;s all,
+                            I&rsquo;ve got a decent set of UI/UX design skills
+                            too, &apos;cause why not make life harder by caring
+                            about how things actually look? I mean, who
+                            doesn&rsquo;t love combining art and logic while
+                            dodging a nervous breakdown? Sure, I&rsquo;ve been
+                            part of hackathons and projects that make me sound
+                            all “driven” and “passionate”—and hey, some of
+                            &apos;em have gone pretty well, while others, well,
+                            not so much.
                         </p>
                         <p className={aboutStyles.paragraph}>
-                            So, if you’re looking for someone who gets the job
-                            done with minimal sugar-coating, I’m your guy. It
-                            won’t always be pretty (unless we’re talkin' UI),
-                            but it’ll be functional, effective, and, dare I say,
-                            brilliant.
+                            So, if you&rsquo;re looking for someone who gets the
+                            job done with minimal sugar-coating, I&rsquo;m your
+                            guy. It won&rsquo;t always be pretty (unless
+                            we&rsquo;re talkin&apos; UI), but it&rsquo;ll be
+                            functional, effective, and, dare I say, brilliant.
                         </p>
                     </div>
                 </div>

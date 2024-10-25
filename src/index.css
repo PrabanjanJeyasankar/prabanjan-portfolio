@@ -11,6 +11,7 @@ html, body {
     margin: 1.3rem auto;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 * {

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import heroStyles from './HeroComponent.module.css'
 import HeroAppIconsComponent from '../../SupportComponents/HeroAppIconsComponent/HeroAppIconsComponent'
 import ProjectComponent from '../ProjectComponent/ProjectComponent'
-import HireMeComponent from '../../MainComponents/HireMeComponent/HireMeComponent'
+import HireMeComponent from '../HireMeComponent/HireMeComponent'
 
 function HeroComponent() {
     const [isVisible, setIsVisible] = useState(false)
@@ -20,7 +20,7 @@ function HeroComponent() {
                         isVisible ? heroStyles.visible : ''
                     }`}>
                     <div className={heroStyles.availability}>
-                        <span className={heroStyles.available_indicator}></span>
+                        <span className={heroStyles.available_indicator} />
                         <strong>Available for freelance</strong>
                     </div>
                     <div className={heroStyles.hero_name}>

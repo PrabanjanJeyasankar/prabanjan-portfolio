@@ -3,9 +3,9 @@
 <url>
 	<loc>https://prabanjan-jeyasankar.vercel.app/</loc>
 	<lastmod>2024-10-23T04:01:34+01:00</lastmod>
-	<priority>0.8</priority>
+	<priority>1.0</priority>
 </url>
-<url>
+<!-- <url>
 	<loc>https://prabanjan-jeyasankar.vercel.app/portfolio</loc>
 	<lastmod>2024-10-23T04:01:34+01:00</lastmod>
 	<priority>1.0</priority>
@@ -24,5 +24,5 @@
 	<loc>https://prabanjan-jeyasankar.vercel.app/viewproject/5</loc>
 	<lastmod>2024-10-23T04:01:34+01:00</lastmod>
 	<priority>0.8</priority>
-</url>
+</url> -->
 </urlset>
