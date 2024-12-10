@@ -18,6 +18,9 @@ function ProjectComponent() {
 
     const handleViewDetails = (projectId) => {
         navigate(`/viewproject/${projectId}`)
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+        }, 50)
     }
 
     return (
@@ -32,9 +35,9 @@ function ProjectComponent() {
                         alt={project.title}
                         className={`${projectStyles.projectImage} ${
                             project.loaded ? projectStyles.loaded : ''
-                        }`} // Apply loaded class based on loaded state
+                        }`}
                         onLoad={(e) => {
-                            e.currentTarget.classList.add(projectStyles.loaded) // Add loaded class when image is loaded
+                            e.currentTarget.classList.add(projectStyles.loaded)
                         }}
                     />
                     <div className={projectStyles.projectDetails}>
@@ -61,7 +64,8 @@ function ProjectComponent() {
                                     width='10'>
                                     <path
                                         d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-                                        fill='white' />
+                                        fill='white'
+                                    />
                                 </svg>
                                 <svg
                                     viewBox='0 0 14 15'
@@ -71,7 +75,8 @@ function ProjectComponent() {
                                     className={`${projectStyles.buttonIconSvg} ${projectStyles.buttonIconSvgCopy}`}>
                                     <path
                                         d='M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z'
-                                        fill='white' />
+                                        fill='white'
+                                    />
                                 </svg>
                             </span>
                         </button>

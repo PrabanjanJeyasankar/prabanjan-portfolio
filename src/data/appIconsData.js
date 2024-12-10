@@ -11,17 +11,17 @@ import BootStrap from '../assets/images/app-icons/bootstrap.svg'
 import MaterialUI from '../assets/images/app-icons/materialui.svg'
 
 const apps = [
+    { name: 'BootStrap', icon: BootStrap },
+    { name: 'GitIcon', icon: GitIcon },
+    { name: 'FigmaIcon', icon: FigmaIcon },
+    { name: 'Java', icon: Java },
     { name: 'HTML', icon: Html },
     { name: 'Css', icon: Css },
-    { name: 'FigmaIcon', icon: FigmaIcon },
     { name: 'JavaScript', icon: JavaScript },
     { name: 'ReactJs', icon: ReactJs },
-    { name: 'Java', icon: Java },
     { name: 'Postman', icon: Postman },
     { name: 'TailwindCss', icon: TailwindCss },
     { name: 'MaterialUI', icon: MaterialUI },
-    { name: 'GitIcon', icon: GitIcon },
-    { name: 'BootStrap', icon: BootStrap },
 ]
 
 export default apps

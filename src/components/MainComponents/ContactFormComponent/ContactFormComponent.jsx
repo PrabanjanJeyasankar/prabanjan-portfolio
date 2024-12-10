@@ -38,7 +38,7 @@ function ContactFormComponent() {
             newErrors.user_email =
                 '* I promise I won’t spam you! Just drop your email'
         } else if (!emailValue.includes('@')) {
-            newErrors.user_email = '* just missing the `@`"'
+            newErrors.user_email = '* just missing the `@`'
         }
         if (!form.current.message.value) {
             newErrors.message = '* Oops! Looks like your message is missing.'
@@ -49,25 +49,22 @@ function ContactFormComponent() {
             return
         }
 
-        emailjs
-            .sendForm(
-                'service_xg5un4a', // service ID
-                'template_j7bty2w', // template ID
-                form.current,
-                'Cbz0K1C8paY12SCF9' // public key
-            )
-            .then(
-                () => {
-                    console.log('Email successfully sent!')
-                    setSuccessMessage('Message sent successfully!')
-                    form.current.reset()
-                    setErrors({ user_name: '', user_email: '', message: '' })
-                },
-                (error) => {
-                    console.log('Failed to send email:', error.text)
-                    setErrorMessage('Message sending failed, please try again.')
-                }
-            )
+        const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+        const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+        const publicKey = import.meta.env.VITE_EMAILJS_USER_ID
+
+        emailjs.sendForm(serviceID, templateID, form.current, publicKey).then(
+            () => {
+                console.log('Email successfully sent!')
+                setSuccessMessage('Message sent successfully!')
+                form.current.reset()
+                setErrors({ user_name: '', user_email: '', message: '' })
+            },
+            (error) => {
+                console.log('Failed to send email:', error)
+                setErrorMessage('Message sending failed, please try again.')
+            }
+        )
     }
 
     return (

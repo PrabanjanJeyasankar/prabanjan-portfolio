@@ -19,13 +19,15 @@ function NavigationBarComponent() {
 
     useEffect(() => {
         const scrollbar = Scrollbar.init(document.body, {
-            damping: 0.03,
+            damping: 0.08,
+            renderByPixels: true,
+            overscrollDamping: 0.5,
         })
 
         const updateNavbarPosition = () => {
             if (navbarRef.current) {
                 const offset = scrollbar.offset.y
-                navbarRef.current.style.top = `${Math.max(0,offset)}px`
+                navbarRef.current.style.top = `${Math.max(0, offset)}px`
             }
         }
 
@@ -65,6 +67,7 @@ function NavigationBarComponent() {
                     isMenuOpen ? navBarStyles.active : ''
                 }`}
                 onClick={toggleMenu}
+                onKeyDown={(event) => handleKeyDown(event, toggleMenu)}
                 aria-expanded={isMenuOpen}
                 aria-label='Toggle navigation menu'>
                 <span className={navBarStyles.line} />

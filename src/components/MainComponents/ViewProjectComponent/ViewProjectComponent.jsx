@@ -8,6 +8,10 @@ function ViewProjectComponent() {
     const [isVisible, setIsVisible] = useState(false)
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    useEffect(() => {
         const timer = setTimeout(() => setIsVisible(true), 100)
         return () => clearTimeout(timer)
     }, [])
@@ -20,6 +24,9 @@ function ViewProjectComponent() {
             (project) => project.id === parseInt(id)
         )
         setProject(projectData)
+        setTimeout(() => {
+            window.scrollTo(0, 0)
+        }, 50)
     }, [id])
 
     if (!project) {
