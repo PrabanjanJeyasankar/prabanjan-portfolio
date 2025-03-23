@@ -1,8 +1,8 @@
 import React from 'react'
-import expStyles from './ExperienceComponent.module.css'
-import experiences from '../../../data/experienceData'
 import { Link } from 'react-router-dom'
-import HeroAppIconsComponent from '../HeroAppIconsComponent/HeroAppIconsComponent'
+import { appsIconForSkills } from '../../../data/appIconsData'
+import experiences from '../../../data/experienceData'
+import expStyles from './ExperienceComponent.module.css'
 
 function ExperienceComponent() {
     // Filter professional and hackathon experiences
@@ -90,8 +90,27 @@ function ExperienceComponent() {
                     </div>
                 </div>
             ))}
-            <h1 className={expStyles.stacks_title}>Stacks</h1>
-            <HeroAppIconsComponent />
+            <h1 className={expStyles.skills_title}>Skills</h1>
+            <div className={expStyles.skills_icon_container}>
+                {appsIconForSkills.map((app, index) => (
+                    <div key={index} className={expStyles.icon_wrapper}>
+                        <div
+                            className={`${expStyles.icon} ${
+                                app.name === 'GitHub'
+                                    ? expStyles.icon_github
+                                    : ''
+                            }`}>
+                            <div className={expStyles.image_container}>
+                                <img
+                                    src={app.icon}
+                                    alt={app.name}
+                                    className={expStyles.app_icon_image}
+                                />
+                            </div>
+                        </div>
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }
